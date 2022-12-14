@@ -179,10 +179,12 @@ input:checked ~ .bubble::after {
   width: 20px;
   height: 20px;
 }
+
 .todo-item .actions img {
   width: 20px;
   height: 20px;
 }
+
 .todo-item.done .todo-content input {
   text-decoration: line-through;
   color: var(--grey);
