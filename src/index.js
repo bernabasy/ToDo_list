@@ -33,4 +33,3 @@ window.addEventListener('load', () => {
 
   display();
 });
-
