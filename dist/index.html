@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo_list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
+<body>
+  <main class="app">
+    <section class="greeting">
+      <h1 class="tittle">To Do List</h1>
+      <img id="icon"class ="imagwh" alt="restart todo" >
+    </section>
+    <section class="create-todo">
+      <form id="new-todo-form">
+        <input type="text" name="content" id="content" placeholder="Add to your list..." aria-label="content" required>
+        <button type="submit"><img id="arrowimg" src="image/arrow.png" alt="Add task - arrow icon" ></button>
+      </form>
+    </section>
+    <section class="todo-list">
+      <div class="list" id="todo-list-wrap">
+      </div>
+      <button type="button" class="clear-all">Clear all completed</button>
+    </section>
+  </main> 
+</body>
+</html>
