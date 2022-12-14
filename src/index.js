@@ -44,8 +44,6 @@ const display = () => {
     input.setAttribute("aria-label", "checkbox");
     editImg.src = more;
     editImg.setAttribute("alt", "restart todo");
-    // editImg.setAttribute("width", "20");
-    // editImg.setAttribute("height", "20");
 
     label.classList.add("label");
     span.classList.add("bubble");
