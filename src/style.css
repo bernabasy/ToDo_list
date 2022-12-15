@@ -176,13 +176,6 @@ input:checked ~ .bubble::after {
 .todo-item .actions {
   display: flex;
   align-items: center;
-  width: 20px;
-  height: 20px;
-}
-
-.todo-item .actions img {
-  width: 20px;
-  height: 20px;
 }
 
 .todo-item.done .todo-content input {
@@ -215,6 +208,17 @@ input:checked ~ .bubble::after {
 
 .todo-list button:hover {
   background-color: var(--light);
+}
+
+.todo-item .actions .edit {
+  margin-right: 0.5rem;
+  background-color: #fcb0c3;
+  color: var(--dark);
+}
+
+.todo-item .actions .remove {
+  background-color: var(--danger);
+  color: var(--dark);
 }
 
 .todo-item .actions button:hover {
