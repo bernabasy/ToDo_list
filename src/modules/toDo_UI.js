@@ -1,5 +1,7 @@
 import Remove from './Remove.js';
 
+let editToDo;
+
 export default function display() {
   const todoList = document.querySelector('#todo-list-wrap');
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
@@ -41,20 +43,24 @@ export default function display() {
     actions.appendChild(removeBtn);
 
     editBtn.addEventListener('click', () => {
-      const inpunt = content.querySelector('input');
-      inpunt.removeAttribute('readonly');
-      inpunt.focus();
-      inpunt.addEventListener('blur', (e) => {
-        inpunt.setAttribute('readonly', true);
-        todo.content = e.target.value;
-        localStorage.setItem('todos', JSON.stringify(todos));
-        display();
-      });
+      editToDo(todo, content, todos);
     });
 
     removeBtn.addEventListener('click', (e) => {
-      Remove.todo(todo.id);
+      Remove(todo.id);
       e.target.parentElement.parentElement.remove();
     });
   });
 }
+
+editToDo = (todo, content, todos) => {
+  const inpunt = content.querySelector('input');
+  inpunt.removeAttribute('readonly');
+  inpunt.focus();
+  inpunt.addEventListener('blur', (e) => {
+    inpunt.setAttribute('readonly', true);
+    todo.content = e.target.value;
+    localStorage.setItem('todos', JSON.stringify(todos));
+    display();
+  });
+};
