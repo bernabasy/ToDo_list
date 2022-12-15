@@ -19,3 +19,10 @@ window.addEventListener('load', () => {
   });
   display();
 });
+// import allCompleted from "./Remove.js";
+// const clearBtn = document.querySelector(".clear-all");
+
+// clearBtn.addEventListener("click", () => {
+//   allCompleted();
+//   display();
+// });
