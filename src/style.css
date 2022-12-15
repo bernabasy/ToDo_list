@@ -221,6 +221,11 @@ input:checked ~ .bubble::after {
   color: var(--dark);
 }
 
+.todo-item.complet .todo-content input {
+  text-decoration: line-through;
+  color: var(--grey);
+}
+
 .todo-item .actions button:hover {
   background-color: var(--light);
   color: var(--dark);
