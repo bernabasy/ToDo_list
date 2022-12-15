@@ -1,4 +1,5 @@
 import Remove from './Remove.js';
+import allCompleted from './clearCompleted.js';
 
 let editToDo;
 
@@ -10,7 +11,7 @@ export default function display() {
 
   todos.forEach((todo) => {
     const todoItem = document.createElement('div');
-    todoItem.classList.add('todo-item');
+    todoItem.classList.add('todo-item', todo.complet ? 'complet' : 'a');
 
     const label = document.createElement('label');
     const input = document.createElement('input');
@@ -22,7 +23,6 @@ export default function display() {
 
     input.type = 'checkbox';
     input.checked = todo.complet;
-
     span.classList.add('bubble');
     content.classList.add('todo-content');
     actions.classList.add('actions');
@@ -41,6 +41,17 @@ export default function display() {
     label.appendChild(span);
     actions.appendChild(editBtn);
     actions.appendChild(removeBtn);
+
+    input.addEventListener('change', () => {
+      todo.complet = !todo.complet;
+
+      if (todo.complet) {
+        todoItem.classList.add('complet');
+      } else {
+        todoItem.classList.remove('complet');
+      }
+      localStorage.setItem('todos', JSON.stringify(todos));
+    });
 
     editBtn.addEventListener('click', () => {
       editToDo(todo, content, todos);
@@ -64,3 +75,9 @@ editToDo = (todo, content, todos) => {
     display();
   });
 };
+
+const clearBtn = document.querySelector('.clear-all');
+clearBtn.addEventListener('click', () => {
+  allCompleted();
+  display();
+});
