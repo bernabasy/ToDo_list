@@ -46,7 +46,10 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 > Describe between 1-3 key features of the application.
-- **[add more animation]**
+- **Add todo**
+- **Edit todo**
+- **Delete todo**
+- **Remove completed**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LIVE DEMO -->
@@ -91,7 +94,7 @@ To run project, run the following command:
 👤 Bernabas yosef
 
  GitHub: [@githubhandle](https://github.com/bernabasy)
- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bernabas-yosef-74b571186)
+ LinkedIn: [LinkedIn](https://www.linkedin.com/in/bernabasjosef/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
