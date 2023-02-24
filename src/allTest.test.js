@@ -2,6 +2,7 @@
 import addToDo from './modules/add.js';
 import setIds from './modules/setIds.js';
 import Remove from './modules/Remove.js';
+import allCompleted from './modules/clearCompleted.js';
 
 const localStorageMock = (() => {
   let store = {};
@@ -36,17 +37,6 @@ describe('setIds', () => {
   });
 });
 
-// describe('Remove', () => {
-//   it('should remove a todo from localStorage', () => {
-//     const todos = [{ id: 1, title: 'Todo 1', completed: false },
-//       { id: 2, title: 'Todo 2', completed: false },
-//       { id: 3, title: 'Todo 3', completed: false }];
-//     localStorage.setItem('todos', JSON.stringify(todos));
-//     Remove(1); const newTodos = JSON.parse(localStorage.getItem('todos'));
-//     expect(newTodos).toEqual([{ id: 1, title: 'Todo 1', completed: false },
-//     ]);
-//   });
-// });
 describe('Remove', () => {
   it('should remove a todo item from the local storage', () => {
     const todos = [{ id: 1, title: 'Do homework' },
@@ -55,5 +45,14 @@ describe('Remove', () => {
     localStorage.setItem('todos', JSON.stringify(todos));
     Remove(2); const newTodos = JSON.parse(localStorage.getItem('todos'));
     expect(newTodos).not.toContainEqual({ id: 2, title: 'Go to the gym' });
+  });
+});
+
+describe('allCompleted', () => {
+  it('should remove all completed todos from localStorage', () => {
+    const todos = [{ id: 1, complet: false }, { id: 2, complet: true }];
+    localStorage.setItem('todos', JSON.stringify(todos)); allCompleted();
+    const newToDos = JSON.parse(localStorage.getItem('todos'));
+    expect(newToDos).toEqual([{ id: 1, complet: false }]);
   });
 });
