@@ -40,11 +40,11 @@ describe('setIds', () => {
 describe('Remove', () => {
   it('should remove a todo item from the local storage', () => {
     const todos = [{ id: 1, title: 'Do homework' },
-      { id: 2, title: 'Go to the gym' },
+      { id: 2, title: 'Go to gym' },
       { id: 3, title: 'Buy groceries' }];
     localStorage.setItem('todos', JSON.stringify(todos));
     Remove(2); const newTodos = JSON.parse(localStorage.getItem('todos'));
-    expect(newTodos).not.toContainEqual({ id: 2, title: 'Go to the gym' });
+    expect(newTodos).not.toContainEqual({ id: 2, title: 'Go to gym' });
   });
 });
 
