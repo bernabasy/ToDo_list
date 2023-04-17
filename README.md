@@ -30,7 +30,7 @@
 
 # 📖 Awesome books <a name="about-project"></a>
 
-> "AwesomeBooks_with_ES6" is a simple website that displays a list of books and allows you to add and remove books from that list. .
+> AwesomeBooks_with_ES6 is a simple website that displays a list of books and allows you to add and remove books from that list. .
 
 ## 🛠 Built With <a name="built-with">HTML, CSS, & Javascript</a>
 
