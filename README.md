@@ -56,7 +56,7 @@
 
 > Here is a link to deployed project.
 
-- [Live Demo Link](https://bernabasy.github.io/ToDo_list/)
+- [Live Demo Link](https://to-do-list-ochre-mu.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
